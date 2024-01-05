@@ -1,38 +1,58 @@
+
 <!doctype html>
 <html lang="en">
+    <!-- This website was created by
+    Author : Jakaria Talukdar
+    WhatsApp : +880 1798-165091 
+    Telegram : https://t.me/FreelancerXakaria
+    Skype : live:.cid.30337a0103de3db4
+    Facebook : https://www.facebook.com/jakaria.talukdar2001
+    Note : call 01798165091 for live contract -->
 
 <head>
     <title>Hard Rock Solution - Song Lyric App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- inportent meta tag -->
+    <meta name="description" content="Hard Rock femouse All song lyrics, English, spanish, portuguis, hindi, bangla">
+    <meta name="keywords" content="Lyric, song lyrics, international song, lyrics song, song">
+    <meta name="author" content="Jakaria Talukdar">
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom css -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <nav class="navbar  navbar-dark my-3">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Hard Rock Solution">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="images/toggler-icon.svg" alt="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <img src="images/toggler-icon.svg" alt="" id=""> -->
+                <i class="fa-solid fa-music music-icon" id="show-advance"></i>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Action 1</a>
                             <a class="dropdown-item" href="#">Action 2</a>
@@ -40,35 +60,160 @@
                     </li>
                 </ul>
             </div>
+            <div class="signature" id="signature">
+                <p>HARD ROCK, are provide you all lyrics of the world. <br> This website was created by <a href="https://www.facebook.com/jakaria.talukdar2001" class="author" target="_blank">Jakaria Talukdar</a></p>
+            </div>
         </nav>
+        
 
         <main class="content-area">
             <div class="search-bar col-md-6 mx-auto">
-                <h1 class="text-center">Hard Rock Lyric Search</h1>
+                <h1 class="text-center">Find your Awesome lyrics</h1>
                 <div class="search-box my-5">
-                    <input id="search-field" type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button onclick="searchSongs()" class="btn btn-success search-btn">Search</button>
+                    <input type="text" class="form-control" placeholder="Enter your artist song name" id="get-song-name">
+                    <button class="btn btn-success search-btn" id="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </div>
             <!-- Single Lyrics -->
-            <h3 id="error-message" class="text-danger"></h3>
-            <div id="song-lyrics" class="single-lyrics text-center">
+            <div class="single-lyrics text-center">
+                <h2 id="not-found" class="text-danger">Song not found</h2>
+                <!-- <h1>Search resasdfasdfdsfult</h1> -->
+            </div>
+
+            <div id="error-massege">
+
+            </div>
+
+            <div id="single-lyrics">
+
+            </div>
+
+            <div id="display-area">
                 
             </div>
-            <div id="song-container" class="search-result col-md-8 mx-auto py-4">
-                
-            </div>
+
         </main>
+        <footer>
+            <a href="index.html">Hard Rock</a>
+            <a href="ttps://www.facebook.com/jakaria.talukdar2001">Author</a>
+            <a href="index.html">© All copyright reserve Hard Rock 2024</a>
+        </footer>
     </div>
-    <script src="app.js"></script>
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <!-- Custom Script Here -->
+    <script>
+        const search = document.getElementById("get-song-name");
+        document.getElementById("search").addEventListener("click", () => {
+            
+            document.getElementById("single-lyrics").innerHTML = "";
+            fetch(`https://api.lyrics.ovh/suggest/${search.value}`)
+            .then(res => res.json())
+            .then(data => {
+                const mainData = data.data;
+                const nextPageData = data.next;
+                
+                for (let i = 0; i < mainData.length; i++) {
+                    const result = mainData[i];
+                    // console.log(result);
+
+                    const newDiv = document.createElement("div");
+                    const motherDiv = document.getElementById("single-lyrics");
+                    motherDiv.appendChild(newDiv);
+                    
+                    newDiv.innerHTML = `
+                        <div class="search-result col-md-8 mx-auto py-4">
+                            <div class="single-result row align-items-center my-3 p-3">
+                                <div class="col-md-9 col-sm-9">
+                                    <h3 class="lyrics-name">${result.title}</h3>
+                                    <p class="author lead">Album: <span>${result.album.title}</span></p>
+                                    <p class="author lead">Airtist: <span>${result.artist.name}</span></p>
+                                    <audio controls>
+                                        <source src="${result.preview}" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                                <div class="col-md-3 col-sm-3 text-md-right text-center margin-0 button-custimize">
+                                    <img src="${result.album.cover}" alt="" style="margin:5px;">
+                                    <a href="#display-area" class="btn btn-success" onclick="getLyric('${result.artist.name}','${result.title}')">Get Lyrics</a>
+                                </div>
+                            </div>
+                        </div>`
+                        search.value= "";
+
+                }
+            })
+        })
+            const getLyric = async (artist, title) => {
+                document.getElementById("display-area").innerHTML = "";
+            const url = `https://api.lyrics.ovh/v1/${artist}/${title}`;
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                displayLyrics(data.lyrics);
+                // console.log(data);
+            }
+            catch (error) {
+                displayError('Sorry! I failed to load lyrics, Please try again later!!!')
+            }
+        }
+
+        // const getLyric = (artist, title) => {
+        //     const url = `https://api.lyrics.ovh/v1/${artist}/${title}`;
+        //     fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => displayLyrics(data.lyrics))
+        // }
+
+        const displayLyrics = lyrics => {
+            const displayArea = document.getElementById("display-area");
+            const lyricParagraph = document.createElement("p");
+            const lyricsDiv = document.getElementById('lyrics');
+            lyricParagraph.innerHTML = "";
+            displayArea.appendChild(lyricParagraph);
+
+            const anchorElement = document.createElement("a");
+            anchorElement.href = "#top";
+            anchorElement.classList.add("btn");
+            anchorElement.classList.add("btn-success");
+            anchorElement.classList.add("class3");
+            displayArea.appendChild(anchorElement);
+            anchorElement.innerHTML = "Search Again"
+
+            if(lyrics == undefined){
+                lyricParagraph.innerText = "Lyrics Not found";
+            }
+            else {
+                lyricParagraph.innerText = lyrics;
+            }
+        }
+
+        const displayError = error => {
+            const errorTag = document.getElementById('error-massege');
+            errorTag.innerText = error;
+        }
+
+        document.getElementById("show-advance").addEventListener("mouseover", () => {
+            const signature = document.getElementById("signature");
+            signature.style.display = "block";
+        });
+        document.getElementById("show-advance").addEventListener("mouseout", () => {
+            const signature = document.getElementById("signature");
+            signature.style.display = "none";
+        });
+        document.getElementById("signature").addEventListener("mouseover", () => {
+            const signature = document.getElementById("signature");
+            signature.style.display = "block";
+        });
+        document.getElementById("signature").addEventListener("mouseout", () => {
+            const signature = document.getElementById("signature");
+            signature.style.display = "none";
+        });
+    </script>
 
 </body>
-
 </html>
